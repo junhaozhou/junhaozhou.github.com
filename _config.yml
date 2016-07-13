@@ -3,8 +3,12 @@
 paginate: 10 # pagination based on number of posts
 paginate_path: "page:num"
 exclude: ["README.md"] # files to exclude
+timezone: Asia/Shanghai
 highlighter: rouge
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 disqus: littlechoc
 google_analytics: UA-80709014-1
 title: Littlechoc
@@ -16,7 +20,7 @@ defaults:
     values:
       title: Littlechoc
 
-description: Stylish Jekyll Theme
+description: Littlechoc's Blog
 author:
   name: Junhao Zhou
   email: junhao.zhou@foxmail.com

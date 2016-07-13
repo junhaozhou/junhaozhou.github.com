@@ -34,25 +34,28 @@ Given a linked list, return the node where the cycle begins. If there is no cycl
 
 **代码片段**
 
-	public ListNode detectCycle(ListNode head) {
-      if (head == null || head.next == null || head.next.next == null) {
-        return null;
-      }
-      ListNode slow = head.next;
-      ListNode fast = head.next.next;
-      //Step 1: 找到slow和fast相遇的点
-      while (slow != fast) {
-        if (fast.next == null || fast.next.next == null) {
-          return null;
-        }
-        slow = slow.next;
-        fast = fast.next.next;
-      }
-      //Step 2: 让指针从起点和相遇点同时出发
-      slow = head;
-      while (slow != fast) {
-        slow = slow.next;
-        fast = fast.next;
-      }
-      return slow;
-	}
+```java
+public ListNode detectCycle(ListNode head) {
+  if (head == null || head.next == null || head.next.next == null) {
+    return null;
+  }
+  ListNode slow = head.next;
+  ListNode fast = head.next.next;
+  //Step 1: 找到slow和fast相遇的点
+  while (slow != fast) {
+    if (fast.next == null || fast.next.next == null) {
+      return null;
+    }
+    slow = slow.next;
+    fast = fast.next.next;
+  }
+  //Step 2: 让指针从起点和相遇点同时出发
+  slow = head;
+  while (slow != fast) {
+    slow = slow.next;
+    fast = fast.next;
+  }
+  return slow;
+}
+```
+
