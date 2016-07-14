@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 142. Linked List Cycle II
+title: "[LeetCode] 142. Linked List Cycle II"
 categories: [Leetcode]
 tags: [Leetcode]
 fullview: true
